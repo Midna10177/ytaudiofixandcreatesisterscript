@@ -1,4 +1,15 @@
 @echo off
+rem Upon running this script with paramter youtube-url or ytsearch:"my search here":
+rem best audio is downloaded in a file
+rem audio is converted to .wav
+rem .wav is loaded into audacity
+rem script waits for you to APPLY A MACRO THAT WILL EXPORT AS OGG
+rem script moves new ogg from the macro-output folder into current and then deletes old original audio and .wav file
+rem 
+rem a sister script will be created, which will launch mpv playing the youtube url video with --audio-file=new-processed-audio
+rem 
+rem useful for applying effects to larger youtube video audio tracks without having to download the whole video just to play them together
+
 echo ----------This script allows you to use a direct link or a ytsearch.----------
 set format=244
 call ytdl --get-id %* > idtemp
